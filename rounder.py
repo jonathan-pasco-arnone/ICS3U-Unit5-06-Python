@@ -8,7 +8,7 @@ def changer(number, round_off_amount):
     # This function removes a specified amount of
     # decimals form a specified number
 
-    number[0] = ((int(number[0] * pow(10, round_off_amount)))
+    number[0] = ((int(number[0] * pow(10, round_off_amount) + 0.5))
                  / pow(10, round_off_amount))
 
 
@@ -22,7 +22,7 @@ def main():
         print("")
         number_input = float(input("Enter a number with decimals: "))
         print("")
-        round_off_amount_input = int(input("Number of decimals removed: "))
+        round_off_amount_input = int(input("Number of to round off to: "))
         print("")
     except Exception:
         print("Please enter valid integers")
